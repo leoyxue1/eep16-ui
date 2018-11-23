@@ -3,8 +3,8 @@ from elasticsearch import Elasticsearch
 import pandas as pd
 
 app = Flask(__name__)
-es = Elasticsearch(['http://eep16.fcr-it.top:9200'])
-es_index="fscrawler-mount"
+es = Elasticsearch(['http://192.168.64.6:9200'])
+es_index="eep16"
 
 
 @app.route('/')
