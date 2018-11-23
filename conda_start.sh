@@ -32,7 +32,7 @@ kill_process() {
 }
 
 start_flask_app() {
-    cd ${APP_ROOT}/eep16_search_ui
+    cd ${APP_ROOT}/eep16-ui
     export FLASK_APP=flask_app.py
     nohup flask run -h 0.0.0.0 -p ${UI_PORT} --reload --with-threads --debugger &>app.log &
     echo "Flask app is started successfully."
