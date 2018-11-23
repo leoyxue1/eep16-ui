@@ -17,7 +17,7 @@ setup_application() {
     conda create -y -n ${VENV_NAME} python=${PYTHON_VERSION} anaconda
     # just in case you want to remove the virtual environment:  conda remove -n ${VENV_NAME} --all
     conda activate ${VENV_NAME}
-    conda install -y -n ${VENV_NAME} --file ${APP_ROOT}/eep16_search_ui/requirements.txt
+    conda install -y -n ${VENV_NAME} --file ${APP_ROOT}/eep16-ui/requirements.txt
 }
 
 kill_process() {

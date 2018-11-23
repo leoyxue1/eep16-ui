@@ -1,7 +1,7 @@
 # EEP16 assignment UI
 
 * Environment setup:
-sudo yum install -y wget bzip2
+sudo yum install -y wget bzip2 git
 cd /tmp
 wget https://repo.anaconda.com/archive/Anaconda3-5.3.1-Linux-x86_64.sh
 bash Anaconda3-5.3.1-Linux-x86_64.sh -b -f -p /opt/anaconda3 -u
