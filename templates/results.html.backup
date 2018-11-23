@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+
+
+{% block body %}
+
+  <center>
+      <h1>Results: ({{ res['hits']['total'] }}) </h1>
+  </center>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Content</th>
+        <th>Author</th>
+        <th>URL</th>
+        <th>Score</th>
+      </tr>
+    </thead>
+
+{% for hit in res['hits']['hits'] %}
+    <tbody>
+      <tr>
+        <th scope="row">{{ hit['_source']['content'] }}</th>
+          <td>{{ hit['_source']['meta']['author'] }}</td>
+          <td><a href="https://storage.fcr-it.top{{ hit['_source']['path']['virtual'] }}">https://storage.fcr-it.top{{ hit['_source']['path']['virtual'] }}</a></td>
+          <td>{{ hit['_score'] }}</td>
+      </tr>
+    </tbody>
+{% endfor %}
+  </table>
+
+
+      </div>
+    </div>
+
+{% endblock %}

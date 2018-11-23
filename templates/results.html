@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+
+
+{% block body %}
+
+  <center>
+      <h1>Results: ({{ res_count }}) </h1>
+  </center>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Content</th>
+        <th>Created Date</th>
+        <th>URL</th>
+        <th>Score</th>
+      </tr>
+    </thead>
+
+{% for key, value in res.items() %}
+    <tbody>
+      <tr>
+        <td>{{ value['highlight']['content'] | safe }}</td>
+        <td>{{ value['meta']['created'] }}</td>
+        <td><a href="https://console.cloud.google.com/storage/browser/storage.fcr-it.top{{ value['path']['virtual'] }}">https://console.cloud.google.com/storage/browser/storage.fcr-it.top{{ value['path']['virtual'] }}</a></td>
+        <td>{{ value['_score'] }}</td>
+      </tr>
+    </tbody>
+{% endfor %}
+  </table>
+
+
+      </div>
+    </div>
+
+{% endblock %}
