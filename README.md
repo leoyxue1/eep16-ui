@@ -21,6 +21,12 @@ wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-6.5.1.ta
 sudo rpm -ivh elasticsearch-6.5.1.rpm
 sudo systemctl enable elasticsearch.service
 
+ElasticSearch security in elasticsearch.yml:
+script.disable_dynamic: true
+script.allowed_contexts: none
+script.allowed_types: none
+
+
 # Mount google storage for fscrawler to scan the documents
 
 Install gcfuse first:
